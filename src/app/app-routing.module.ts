@@ -19,12 +19,12 @@ const routes: Routes = [
 
 
   {path: 'console', component: DashboardComponent, children: [
-    {path: 'account', component: AccountComponent},
+    {path: 'faq', component: AccountComponent},
     {path: 'getQuote', component: QuoteComponent},
    {path: 'settings', component: SettingsComponent},
     // {path: 'client/edit/:id', component: EditClientComponent, canActivate:[AdminAuthGuard]},
     // {path: 'client/:id', component: ClientDetailsComponent, canActivate:[AdminAuthGuard]},
-    // {path: 'settings', component: SettingsComponent, canActivate:[AdminAuthGuard]},
+    {path: 'index', component: LandingComponent},
     {path: '', component: FeatureComponent},
 
   ] },

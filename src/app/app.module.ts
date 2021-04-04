@@ -28,6 +28,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { AccountComponent } from './components/account/account.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 
@@ -48,7 +49,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     LandingComponent,
     AccountComponent,
     FeatureComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
