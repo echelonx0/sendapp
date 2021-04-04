@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "sendmoni",
+    "public": "dist/sendapp",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
