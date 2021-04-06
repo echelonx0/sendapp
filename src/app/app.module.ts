@@ -11,7 +11,6 @@ import { ErrorComponent } from './components/error/error.component';
 import { PasswordComponent } from './components/password/password.component';
 import { RegisterComponent } from './components/register/register.component';
 
-import { FormsModule }   from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -29,6 +28,10 @@ import { AccountComponent } from './components/account/account.component';
 import { FeatureComponent } from './components/feature/feature.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { TransactionsComponent } from './components/transactions/transactions.component';
+import { ViewTransactionsComponent } from './components/view-transactions/view-transactions.component';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 // import { FlashMessagesModule } from 'angular2-flash-messages';
 
@@ -50,12 +53,15 @@ import { ProfileComponent } from './components/profile/profile.component';
     AccountComponent,
     FeatureComponent,
     SettingsComponent,
-    ProfileComponent
+    ProfileComponent,
+    TransactionsComponent,
+    ViewTransactionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     // FlashMessagesModule.forRoot(),
     AngularFireModule,
     AngularFirestoreModule,

@@ -10,6 +10,9 @@ import { LoginComponent } from './components/login/login.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ViewTransactionsComponent } from './components/view-transactions/view-transactions.component';
+import { AdminAuthGuard } from './guards/admin-auth.guard';
+import { AuthGuard } from './guards/auth-guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -24,6 +27,7 @@ const routes: Routes = [
    {path: 'settings', component: SettingsComponent},
     // {path: 'client/edit/:id', component: EditClientComponent, canActivate:[AdminAuthGuard]},
     // {path: 'client/:id', component: ClientDetailsComponent, canActivate:[AdminAuthGuard]},
+    {path: 'transaction/:id', component: ViewTransactionsComponent, canActivate: [AdminAuthGuard]},
     {path: 'index', component: LandingComponent},
     {path: '', component: FeatureComponent},
 
@@ -35,6 +39,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard, AdminAuthGuard]
 })
 export class AppRoutingModule { }
